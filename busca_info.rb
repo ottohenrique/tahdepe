@@ -8,7 +8,8 @@ class BuscaInfo
   end
 
   def start_ssh
-    @ssh = Net::SSH.start("#{@machine}.ir7.com.br", "usuario", password: 'xxxxx')
+    # params do start - url, usuario, senha
+    @ssh = Net::SSH.start("#{@machine}", "usuario", password: 'xxxxx')
   end
 
   def situacao log
